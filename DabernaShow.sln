@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DabernaShow", "DabernaShow\DabernaShow.csproj", "{D294BEA1-ADD5-4B9B-8B8C-413B0732AFFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D294BEA1-ADD5-4B9B-8B8C-413B0732AFFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D294BEA1-ADD5-4B9B-8B8C-413B0732AFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D294BEA1-ADD5-4B9B-8B8C-413B0732AFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D294BEA1-ADD5-4B9B-8B8C-413B0732AFFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45B26393-1F18-4350-94B9-49CCE3A7E074}
+	EndGlobalSection
+EndGlobal
