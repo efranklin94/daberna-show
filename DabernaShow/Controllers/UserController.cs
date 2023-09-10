@@ -15,7 +15,7 @@ namespace DabernaShow.Controllers
             _userService = userService;
         }
 
-        [HttpPost("SetStats")]
+        [HttpPost("SetScore")]
         public IActionResult SetStats([FromQuery] string stat, double score, string username)
         {
             try
