@@ -8,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddScoped<UserRepository>();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<ScoreResetService>();
+
 var redisSettings = RedisSettings.FromConfiguration(builder.Configuration);
 builder.Services.AddSingleton(redisSettings);
 builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
@@ -43,5 +45,18 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+var options = new BackgroundJobServerOptions
+{
+    WorkerCount = Environment.ProcessorCount * 5 
+};
+app.UseHangfireServer(options);
+RecurringJob.AddOrUpdate<ScoreResetService>("reset-scores",
+    x => x.ResetScores(),
+    Cron.Weekly,
+    //"*/ * * * * *", 
+    TimeZoneInfo.Utc 
+);
+
 
 app.Run();
