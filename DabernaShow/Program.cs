@@ -3,6 +3,8 @@ using StackExchange.Redis;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<UserRepository>();
+builder.Services.AddScoped<UserService>();
 var redisSettings = RedisSettings.FromConfiguration(builder.Configuration);
 builder.Services.AddSingleton(redisSettings);
 builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
